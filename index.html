@@ -1,0 +1,1305 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>R.A.S Pest Control Service</title>
+    <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: { primary: "#00c896", secondary: "#1e293b" },
+            borderRadius: {
+              none: "0px",
+              sm: "4px",
+              DEFAULT: "8px",
+              md: "12px",
+              lg: "16px",
+              xl: "20px",
+              "2xl": "24px",
+              "3xl": "32px",
+              full: "9999px",
+              button: "8px",
+            },
+          },
+        },
+      };
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <style>
+
+
+
+
+      :where([class^="ri-"])::before { content: "\f3c2"; }
+      body {
+          font-family: 'Montserrat', sans-serif;
+          scroll-behavior: smooth;
+      }
+      .glass-effect {
+          backdrop-filter: blur(10px);
+          background-color: rgba(255, 255, 255, 0.1);
+      }
+      .hero-bg {
+          background-image: url('https://readdy.ai/api/search-image?query=Professional%20pest%20control%20service%20with%20a%203D%20spray%20bottle%20against%20a%20dark%20background%20with%20subtle%20blue%20and%20green%20neon%20accents%2C%20particles%20floating%20in%20the%20air%20simulating%20spray%20mist%2C%20modern%20and%20sleek%20design%2C%20high-end%203D%20rendering%20with%20dramatic%20lighting&width=1920&height=1080&seq=1&orientation=landscape');
+          background-size: cover;
+          background-position: center;
+      }
+      .particle {
+          position: absolute;
+          background-color: rgba(0, 200, 150, 0.5);
+          border-radius: 50%;
+          animation: float 8s infinite ease-in-out;
+      }
+      @keyframes float {
+          0%, 100% {
+              transform: translateY(0) translateX(0);
+              opacity: 0;
+          }
+          25% {
+              opacity: 0.5;
+          }
+          50% {
+              transform: translateY(-20px) translateX(10px);
+              opacity: 0.8;
+          }
+          75% {
+              opacity: 0.5;
+          }
+      }
+      .service-card {
+          transition: transform 0.5s ease, box-shadow 0.5s ease;
+          transform-style: preserve-3d;
+      }
+      .service-card:hover {
+          transform: translateY(-10px) rotateY(5deg);
+          box-shadow: 0 20px 25px -5px rgba(0, 200, 150, 0.1), 0 10px 10px -5px rgba(0, 200, 150, 0.04);
+      }
+      .product-feature {
+          transition: transform 0.3s ease;
+      }
+      .product-feature:hover {
+          transform: translateY(-5px);
+      }
+      .hotspot {
+          position: absolute;
+          width: 20px;
+          height: 20px;
+          background-color: rgba(0, 200, 150, 0.8);
+          border-radius: 50%;
+          cursor: pointer;
+          animation: pulse 2s infinite;
+      }
+      @keyframes pulse {
+          0% {
+              transform: scale(0.95);
+              box-shadow: 0 0 0 0 rgba(0, 200, 150, 0.7);
+          }
+          70% {
+              transform: scale(1);
+              box-shadow: 0 0 0 10px rgba(0, 200, 150, 0);
+          }
+          100% {
+              transform: scale(0.95);
+              box-shadow: 0 0 0 0 rgba(0, 200, 150, 0);
+          }
+      }
+      .emergency-btn {
+          animation: emergency-pulse 2s infinite;
+      }
+      @keyframes emergency-pulse {
+          0% {
+              box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.7);
+          }
+          70% {
+              box-shadow: 0 0 0 10px rgba(239, 68, 68, 0);
+          }
+          100% {
+              box-shadow: 0 0 0 0 rgba(239, 68, 68, 0);
+          }
+      }
+      .wave-separator {
+          position: relative;
+          height: 70px;
+          background-color: #1e293b;
+      }
+      .wave-separator::before {
+          content: "";
+          position: absolute;
+          top: -70px;
+          left: 0;
+          width: 100%;
+          height: 70px;
+          background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 320'%3E%3Cpath fill='%231e293b' fill-opacity='1' d='M0,96L48,112C96,128,192,160,288,160C384,160,480,128,576,117.3C672,107,768,117,864,138.7C960,160,1056,192,1152,197.3C1248,203,1344,181,1392,170.7L1440,160L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z'%3E%3C/path%3E%3C/svg%3E");
+          background-size: cover;
+      }
+      input[type="number"]::-webkit-inner-spin-button,
+      input[type="number"]::-webkit-outer-spin-button {
+          -webkit-appearance: none;
+          margin: 0;
+      }
+
+      a:hover{
+        color: greenyellow;
+     
+
+      }
+    </style>
+  </head>
+  <body class="bg-gray-50 text-gray-800">
+    <!-- Header -->
+    <header class="fixed top-0 left-0 w-full z-50 glass-effect">
+      <div class="container mx-auto px-6 py-4">
+        <div class="flex items-center justify-between">
+          <div class="flex items-center">
+            <h1 class="text-2xl font-['Pacifico'] text-white mr-10">R.A.S</h1>
+            <nav class="hidden md:block">
+              <ul class="flex space-x-8">
+                <li>
+                  <a
+                    href="#services"
+                    class="text-white hover:text-primary transition-colors"
+                    >Services</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#about"
+                    class="text-white hover:text-primary transition-colors"
+                    >About Us</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#products"
+                    class="text-white hover:text-primary transition-colors"
+                    >Products</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#contact"
+                    class="text-white hover:text-primary transition-colors"
+                    >Contact</a
+                  >
+                </li>
+              </ul>
+            </nav>
+          </div>
+          <div class="flex items-center space-x-6">
+            <a
+              href="tel:+18001234567"
+              class="hidden md:flex items-center text-white"
+            >
+              <div class="w-8 h-8 flex items-center justify-center mr-2">
+                <i class="ri-phone-line text-primary"></i>
+              </div>
+              <span>81\684245</span>
+            </a>
+          
+            <button
+              class="md:hidden w-10 h-10 flex items-center justify-center"
+            >
+              <i class="ri-menu-line text-white text-2xl"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-bg min-h-screen relative flex items-center">
+      <div class="absolute inset-0 bg-black bg-opacity-50"></div>
+      <div
+        id="particles-container"
+        class="absolute inset-0 overflow-hidden"
+      ></div>
+      <div class="container mx-auto px-6 py-20 relative z-10 w-full">
+        <div class="flex flex-col md:flex-row items-center">
+          <div class="md:w-1/2 text-white">
+            <h1 class="text-4xl md:text-6xl font-bold mb-4">
+              R.A.S PEST CONTROL SERVICE
+            </h1>
+            <p class="text-xl md:text-2xl mb-8 text-gray-200">
+              Professional solutions for all your pest problems. Safe,
+              effective, and guaranteed results.
+            </p>
+            <button
+              class="bg-primary text-white px-8 py-3 !rounded-button font-semibold text-lg hover:bg-opacity-90 transition-all shadow-lg whitespace-nowrap"
+            >
+              Get Service Now
+            </button>
+          </div>
+          <div class="md:w-1/2 flex justify-center mt-12 md:mt-0">
+            <div id="spray-container" class="relative w-64 h-64">
+              <img
+                src="https://readdy.ai/api/search-image?query=Realistic%203D%20rendering%20of%20a%20professional%20pest%20control%20spray%20bottle%20with%20modern%20design%2C%20metallic%20finish%2C%20high-end%20product%20photography%20style%2C%20transparent%20background%2C%20detailed%20texture%2C%20product%20shot%20with%20dramatic%20lighting&width=600&height=600&seq=2&orientation=squarish"
+                alt="Pest Control Spray"
+                class="w-full h-full object-contain"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-20 bg-white">
+      <div class="container mx-auto px-6">
+        <div class="text-center mb-16">
+          <h2 class="text-3xl md:text-4xl font-bold mb-4">
+            Our Professional Services
+          </h2>
+          <p class="text-gray-600 max-w-2xl mx-auto">
+            We offer comprehensive pest control solutions tailored to your
+            specific needs. Our expert technicians use the latest techniques and
+            environmentally friendly products.
+          </p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Service Card 1 -->
+          <div
+            class="service-card bg-white rounded-lg shadow-lg overflow-hidden border border-gray-100"
+          >
+            <div class="h-48 overflow-hidden">
+              <img
+                src="https://readdy.ai/api/search-image?query=Realistic%203D%20rendering%20of%20cockroaches%20on%20a%20clean%20surface%2C%20professional%20pest%20control%20context%2C%20detailed%20texture%2C%20neutral%20background%2C%20showing%20the%20pest%20problem%20that%20needs%20treatment%2C%20high-quality%20product%20photography%20style&width=600&height=400&seq=3&orientation=landscape"
+                alt="Cockroach Control"
+                class="w-full h-full object-cover object-top"
+              />
+            </div>
+            <div class="p-6">
+              <div
+                class="w-12 h-12 flex items-center justify-center bg-primary bg-opacity-10 rounded-full mb-4"
+              >
+                <i class="ri-bug-line text-primary text-xl"></i>
+              </div>
+              <h3 class="text-xl font-bold mb-2">Cockroach Control</h3>
+              <p class="text-gray-600 mb-4">
+                Eliminate cockroach infestations with our comprehensive
+                treatment plans. We target nests and prevent future invasions.
+              </p>
+              <button
+                class="text-primary font-medium flex items-center !rounded-button whitespace-nowrap"
+              >
+                Learn More
+                <div class="w-5 h-5 flex items-center justify-center ml-1">
+                  <i class="ri-arrow-right-line"></i>
+                </div>
+              </button>
+            </div>
+          </div>
+
+          <!-- Service Card 2 -->
+          <div
+            class="service-card bg-white rounded-lg shadow-lg overflow-hidden border border-gray-100"
+          >
+            <div class="h-48 overflow-hidden">
+              <img
+                src="https://readdy.ai/api/search-image?query=Realistic%203D%20rendering%20of%20termites%20damaging%20wood%2C%20professional%20pest%20control%20context%2C%20detailed%20texture%2C%20neutral%20background%2C%20showing%20the%20pest%20problem%20that%20needs%20treatment%2C%20high-quality%20product%20photography%20style&width=600&height=400&seq=4&orientation=landscape"
+                alt="Termite Treatment"
+                class="w-full h-full object-cover object-top"
+              />
+            </div>
+            <div class="p-6">
+              <div
+                class="w-12 h-12 flex items-center justify-center bg-primary bg-opacity-10 rounded-full mb-4"
+              >
+                <i class="ri-home-gear-line text-primary text-xl"></i>
+              </div>
+              <h3 class="text-xl font-bold mb-2">Termite Treatment</h3>
+              <p class="text-gray-600 mb-4">
+                Protect your property from destructive termites with our
+                advanced barrier systems and targeted treatments.
+              </p>
+              <button
+                class="text-primary font-medium flex items-center !rounded-button whitespace-nowrap"
+              >
+                Learn More
+                <div class="w-5 h-5 flex items-center justify-center ml-1">
+                  <i class="ri-arrow-right-line"></i>
+                </div>
+              </button>
+            </div>
+          </div>
+
+   
+          <div
+            class="service-card bg-white rounded-lg shadow-lg overflow-hidden border border-gray-100"
+          >
+            <div class="h-48 overflow-hidden">
+              <img
+                src="https://readdy.ai/api/search-image?query=Realistic%203D%20rendering%20of%20mosquitoes%20in%20flight%2C%20professional%20pest%20control%20context%2C%20detailed%20texture%2C%20neutral%20background%2C%20showing%20the%20pest%20problem%20that%20needs%20treatment%2C%20high-quality%20product%20photography%20style&width=600&height=400&seq=5&orientation=landscape"
+                alt="Mosquito Control"
+                class="w-full h-full object-cover object-top"
+              />
+            </div>
+            <div class="p-6">
+              <div
+                class="w-12 h-12 flex items-center justify-center bg-primary bg-opacity-10 rounded-full mb-4"
+              >
+                <i class="ri-virus-line text-primary text-xl"></i>
+              </div>
+              <h3 class="text-xl font-bold mb-2">Mosquito Control</h3>
+              <p class="text-gray-600 mb-4">
+                Enjoy your outdoor spaces again with our effective mosquito
+                control solutions. We target breeding sites and adult
+                populations.
+              </p>
+              <button
+                class="text-primary font-medium flex items-center !rounded-button whitespace-nowrap"
+              >
+                Learn More
+                <div class="w-5 h-5 flex items-center justify-center ml-1">
+                  <i class="ri-arrow-right-line"></i>
+                </div>
+              </button>
+            </div>
+          </div>
+
+          
+          <div
+            class="service-card bg-white rounded-lg shadow-lg overflow-hidden border border-gray-100"
+          >
+            <div class="h-48 overflow-hidden">
+              <img
+                src="https://readdy.ai/api/search-image?query=Realistic%203D%20rendering%20of%20rodents%20like%20mice%20or%20rats%20near%20a%20wall%2C%20professional%20pest%20control%20context%2C%20detailed%20texture%2C%20neutral%20background%2C%20showing%20the%20pest%20problem%20that%20needs%20treatment%2C%20high-quality%20product%20photography%20style&width=600&height=400&seq=6&orientation=landscape"
+                alt="Rodent Control"
+                class="w-full h-full object-cover object-top"
+              />
+            </div>
+            <div class="p-6">
+              <div
+                class="w-12 h-12 flex items-center justify-center bg-primary bg-opacity-10 rounded-full mb-4"
+              >
+                <i class="ri-mouse-line text-primary text-xl"></i>
+              </div>
+              <h3 class="text-xl font-bold mb-2">Rodent Control</h3>
+              <p class="text-gray-600 mb-4">
+                Eliminate mice and rats with our humane and effective rodent
+                control methods. We seal entry points and remove existing
+                populations.
+              </p>
+              <button
+                class="text-primary font-medium flex items-center !rounded-button whitespace-nowrap"
+              >
+                Learn More
+                <div class="w-5 h-5 flex items-center justify-center ml-1">
+                  <i class="ri-arrow-right-line"></i>
+                </div>
+              </button>
+            </div>
+          </div>
+
+         
+          <div
+            class="service-card bg-white rounded-lg shadow-lg overflow-hidden border border-gray-100"
+          >
+            <div class="h-48 overflow-hidden">
+              <img
+                src="https://readdy.ai/api/search-image?query=Realistic%203D%20rendering%20of%20ants%20on%20a%20surface%2C%20professional%20pest%20control%20context%2C%20detailed%20texture%2C%20neutral%20background%2C%20showing%20the%20pest%20problem%20that%20needs%20treatment%2C%20high-quality%20product%20photography%20style&width=600&height=400&seq=7&orientation=landscape"
+                alt="Ant Control"
+                class="w-full h-full object-cover object-top"
+              />
+            </div>
+            <div class="p-6">
+              <div
+                class="w-12 h-12 flex items-center justify-center bg-primary bg-opacity-10 rounded-full mb-4"
+              >
+                <i class="ri-bug-2-line text-primary text-xl"></i>
+              </div>
+              <h3 class="text-xl font-bold mb-2">Ant Control</h3>
+              <p class="text-gray-600 mb-4">
+                Get rid of ant colonies with our targeted treatments. We
+                identify the species and apply the most effective solution.
+              </p>
+              <button
+                class="text-primary font-medium flex items-center !rounded-button whitespace-nowrap"
+              >
+                Learn More
+                <div class="w-5 h-5 flex items-center justify-center ml-1">
+                  <i class="ri-arrow-right-line"></i>
+                </div>
+              </button>
+            </div>
+          </div>
+
+          
+          <div
+            class="service-card bg-white rounded-lg shadow-lg overflow-hidden border border-gray-100"
+          >
+            <div class="h-48 overflow-hidden">
+              <img
+                src="https://readdy.ai/api/search-image?query=Realistic%203D%20rendering%20of%20bed%20bugs%20on%20fabric%2C%20professional%20pest%20control%20context%2C%20detailed%20texture%2C%20neutral%20background%2C%20showing%20the%20pest%20problem%20that%20needs%20treatment%2C%20high-quality%20product%20photography%20style&width=600&height=400&seq=8&orientation=landscape"
+                alt="Bed Bug Treatment"
+                class="w-full h-full object-cover object-top"
+              />
+            </div>
+            <div class="p-6">
+              <div
+                class="w-12 h-12 flex items-center justify-center bg-primary bg-opacity-10 rounded-full mb-4"
+              >
+                <i class="ri-hotel-bed-line text-primary text-xl"></i>
+              </div>
+              <h3 class="text-xl font-bold mb-2">Bed Bug Treatment</h3>
+              <p class="text-gray-600 mb-4">
+                Eliminate bed bugs completely with our multi-step treatment
+                process. We treat all affected areas and provide prevention
+                advice.
+              </p>
+              <button
+                class="text-primary font-medium flex items-center !rounded-button whitespace-nowrap"
+              >
+                Learn More
+                <div class="w-5 h-5 flex items-center justify-center ml-1">
+                  <i class="ri-arrow-right-line"></i>
+                </div>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="py-20 bg-gray-50">
+      <div class="container mx-auto px-6">
+        <div class="flex flex-col md:flex-row items-center">
+          <div class="md:w-1/2 mb-10 md:mb-0">
+            <img
+              src="https://readdy.ai/api/search-image?query=Professional%20pest%20control%20technician%20in%20uniform%20spraying%20insecticide%2C%20wearing%20protective%20equipment%2C%20modern%20and%20professional%20appearance%2C%20high-quality%20photography%20style%2C%20showing%20the%20service%20in%20action&width=600&height=600&seq=9&orientation=squarish"
+              alt="About R.A.S Pest Control"
+              class="rounded-lg shadow-xl"
+            />
+          </div>
+          <div class="md:w-1/2 md:pl-12">
+            <h2 class="text-3xl md:text-4xl font-bold mb-6">
+              About R.A.S Pest Control
+            </h2>
+            <p class="text-gray-600 mb-6">
+              With over 15 years of experience, R.A.S Pest Control Service has
+              been the trusted name in pest management across the region. We
+              combine industry expertise with cutting-edge technology to deliver
+              exceptional results.
+            </p>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+              <div class="flex items-start">
+                <div
+                  class="w-10 h-10 flex items-center justify-center bg-primary bg-opacity-10 rounded-full mr-4 mt-1 flex-shrink-0"
+                >
+                  <i class="ri-shield-check-line text-primary"></i>
+                </div>
+                <div>
+                  <h3 class="font-bold mb-2">Licensed Professionals</h3>
+                  <p class="text-gray-600 text-sm">
+                    All our technicians are fully licensed and undergo regular
+                    training.
+                  </p>
+                </div>
+              </div>
+              <div class="flex items-start">
+                <div
+                  class="w-10 h-10 flex items-center justify-center bg-primary bg-opacity-10 rounded-full mr-4 mt-1 flex-shrink-0"
+                >
+                  <i class="ri-leaf-line text-primary"></i>
+                </div>
+                <div>
+                  <h3 class="font-bold mb-2">Eco-Friendly Solutions</h3>
+                  <p class="text-gray-600 text-sm">
+                    We use environmentally responsible products and methods.
+                  </p>
+                </div>
+              </div>
+              <div class="flex items-start">
+                <div
+                  class="w-10 h-10 flex items-center justify-center bg-primary bg-opacity-10 rounded-full mr-4 mt-1 flex-shrink-0"
+                >
+                  <i class="ri-customer-service-2-line text-primary"></i>
+                </div>
+                <div>
+                  <h3 class="font-bold mb-2">24/7 Customer Support</h3>
+                  <p class="text-gray-600 text-sm">
+                    Our team is available around the clock for emergency
+                    services.
+                  </p>
+                </div>
+              </div>
+              <div class="flex items-start">
+                <div
+                  class="w-10 h-10 flex items-center justify-center bg-primary bg-opacity-10 rounded-full mr-4 mt-1 flex-shrink-0"
+                >
+                  <i class="ri-award-line text-primary"></i>
+                </div>
+                <div>
+                  <h3 class="font-bold mb-2">Guaranteed Results</h3>
+                  <p class="text-gray-600 text-sm">
+                    We stand behind our work with a 100% satisfaction guarantee.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <button
+              class="bg-primary text-white px-6 py-3 !rounded-button font-medium hover:bg-opacity-90 transition-all whitespace-nowrap"
+            >
+              Learn More About Us
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="products" class="py-20 bg-white">
+      <div class="container mx-auto px-6">
+        <div class="text-center mb-16">
+          <h2 class="text-3xl md:text-4xl font-bold mb-4">
+            Our Premium Products
+          </h2>
+          <p class="text-gray-600 max-w-2xl mx-auto">
+            Discover our professional-grade pest control products, designed to
+            eliminate pests effectively while being safe for your family and
+            pets.
+          </p>
+        </div>
+        <div class="flex flex-col md:flex-row items-center">
+          <div class="md:w-1/2 relative">
+            <div id="product-model" class="relative mx-auto w-80 h-80">
+              <img
+                src="https://readdy.ai/api/search-image?query=Professional%20pest%20control%20spray%20product%20bottle%20with%20modern%20design%2C%20high-end%203D%20rendering%2C%20detailed%20texture%2C%20product%20photography%20on%20transparent%20background%2C%20showing%20the%20premium%20quality%20of%20the%20product&width=800&height=800&seq=10&orientation=squarish"
+                alt="Premium Pest Control Spray"
+                class="w-full h-full object-contain"
+              />
+
+            
+              <div
+                class="hotspot absolute top-1/4 left-1/4"
+                data-feature="formula"
+              ></div>
+              <div
+                class="hotspot absolute top-1/2 right-1/4"
+                data-feature="nozzle"
+              ></div>
+              <div
+                class="hotspot absolute bottom-1/4 left-1/3"
+                data-feature="grip"
+              ></div>
+            </div>
+          </div>
+          <div class="md:w-1/2 md:pl-12 mt-12 md:mt-0">
+            <h3 class="text-2xl font-bold mb-6">
+              ProShield Ultimate Pest Control Spray
+            </h3>
+            <div class="space-y-6">
+              <div
+                class="product-feature flex items-start"
+                id="feature-formula"
+              >
+                <div
+                  class="w-12 h-12 flex items-center justify-center bg-primary bg-opacity-10 rounded-full mr-4 flex-shrink-0"
+                >
+                  <i class="ri-flask-line text-primary text-xl"></i>
+                </div>
+                <div>
+                  <h4 class="font-bold mb-1">Advanced Formula</h4>
+                  <p class="text-gray-600">
+                    Our proprietary blend targets multiple pest species while
+                    being odorless and non-staining. Safe for use around
+                    children and pets when used as directed.
+                  </p>
+                </div>
+              </div>
+              <div class="product-feature flex items-start" id="feature-nozzle">
+                <div
+                  class="w-12 h-12 flex items-center justify-center bg-primary bg-opacity-10 rounded-full mr-4 flex-shrink-0"
+                >
+                  <i class="ri-focus-3-line text-primary text-xl"></i>
+                </div>
+                <div>
+                  <h4 class="font-bold mb-1">Precision Nozzle</h4>
+                  <p class="text-gray-600">
+                    Adjustable spray pattern allows for targeted application in
+                    cracks and crevices or broader coverage for larger areas.
+                  </p>
+                </div>
+              </div>
+              <div class="product-feature flex items-start" id="feature-grip">
+                <div
+                  class="w-12 h-12 flex items-center justify-center bg-primary bg-opacity-10 rounded-full mr-4 flex-shrink-0"
+                >
+                  <i class="ri-hand-heart-line text-primary text-xl"></i>
+                </div>
+                <div>
+                  <h4 class="font-bold mb-1">Ergonomic Grip</h4>
+                  <p class="text-gray-600">
+                    Designed for comfort during extended use with non-slip
+                    texture and balanced weight distribution.
+                  </p>
+                </div>
+              </div>
+              <div class="product-feature flex items-start">
+                <div
+                  class="w-12 h-12 flex items-center justify-center bg-primary bg-opacity-10 rounded-full mr-4 flex-shrink-0"
+                >
+                  <i class="ri-time-line text-primary text-xl"></i>
+                </div>
+                <div>
+                  <h4 class="font-bold mb-1">Long-Lasting Protection</h4>
+                  <p class="text-gray-600">
+                    Creates a residual barrier that continues to work for up to
+                    3 months, providing ongoing protection against
+                    reinfestation.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="mt-8">
+            
+                
+              
+              
+             
+              <span class="ml-4 text-gray-600"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  
+    <section class="py-20 bg-gray-50">
+      <div class="container mx-auto px-6">
+        <div class="text-center mb-16">
+          <h2 class="text-3xl md:text-4xl font-bold mb-4">
+            What Our Customers Say
+          </h2>
+          <p class="text-gray-600 max-w-2xl mx-auto">
+            Don't just take our word for it. Here's what our satisfied customers
+            have to say about our pest control services.
+          </p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          
+          <div class="bg-white p-8 rounded-lg shadow-lg border border-gray-100">
+            <div class="flex items-center mb-4">
+              <div class="text-primary">
+                <i class="ri-star-fill"></i>
+                <i class="ri-star-fill"></i>
+                <i class="ri-star-fill"></i>
+                <i class="ri-star-fill"></i>
+                <i class="ri-star-fill"></i>
+              </div>
+              <span class="ml-2 text-gray-600">5.0</span>
+            </div>
+            <p class="text-gray-600 mb-6">
+              "After struggling with a cockroach infestation for months, I
+              called R.A.S Pest Control. Their technician was professional,
+              thorough, and explained everything. Haven't seen a single roach
+              since their treatment!"
+            </p>
+            <div class="flex items-center">
+              <div
+              
+              >
+                
+              </div>
+            
+            </div>
+          </div>
+
+       
+          <div class="bg-white p-8 rounded-lg shadow-lg border border-gray-100">
+            <div class="flex items-center mb-4">
+              <div class="text-primary">
+                <i class="ri-star-fill"></i>
+                <i class="ri-star-fill"></i>
+                <i class="ri-star-fill"></i>
+                <i class="ri-star-fill"></i>
+                <i class="ri-star-fill"></i>
+              </div>
+              <span class="ml-2 text-gray-600">5.0</span>
+            </div>
+            <p class="text-gray-600 mb-6">
+              "As a restaurant owner, pest control is critical for our business.
+              R.A.S provides regular service that keeps our establishment
+              pest-free. Their discreet and effective approach has been
+              invaluable."
+            </p>
+            <div class="flex items-center">
+        
+            </div>
+          </div>
+
+         
+          <div class="bg-white p-8 rounded-lg shadow-lg border border-gray-100">
+            <div class="flex items-center mb-4">
+              <div class="text-primary">
+                <i class="ri-star-fill"></i>
+                <i class="ri-star-fill"></i>
+                <i class="ri-star-fill"></i>
+                <i class="ri-star-fill"></i>
+                <i class="ri-star-half-fill"></i>
+              </div>
+              <span class="ml-2 text-gray-600">4.5</span>
+            </div>
+            <p class="text-gray-600 mb-6">
+              "We discovered termites during our home renovation and were
+              devastated. R.A.S came quickly, treated the problem, and set up
+              preventative measures. Their follow-up service has been
+              exceptional."
+            </p>
+            <div class="flex items-center">
+             
+           
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <section id="contact" class="py-20 bg-white">
+      <div class="container mx-auto px-6">
+        <div class="text-center mb-16">
+          <h2 class="text-3xl md:text-4xl font-bold mb-4">Contact Us</h2>
+          <p class="text-gray-600 max-w-2xl mx-auto">
+            Have a pest problem? Get in touch with our team for a free
+            consultation and quote. We're available 24/7 for emergency services.
+          </p>
+        </div>
+        <div class="flex flex-col lg:flex-row">
+          <div class="lg:w-1/2 mb-10 lg:mb-0 lg:pr-12">
+            <form class="space-y-6">
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="relative">
+                  <input
+                    type="text"
+                    id="name"
+                    class="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded focus:outline-none focus:border-primary"
+                    required
+                  />
+                  <label
+                    for="name"
+                    class="absolute left-4 top-3 text-gray-500 transition-all pointer-events-none"
+                    >Full Name</label
+                  >
+                </div>
+                <div class="relative">
+                  <input
+                    type="email"
+                    id="email"
+                    class="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded focus:outline-none focus:border-primary"
+                    required
+                  />
+                  <label
+                    for="email"
+                    class="absolute left-4 top-3 text-gray-500 transition-all pointer-events-none"
+                    >Email Address</label
+                  >
+                </div>
+              </div>
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="relative">
+                  <input
+                    type="tel"
+                    id="phone"
+                    class="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded focus:outline-none focus:border-primary"
+                    required
+                  />
+                  <label
+                    for="phone"
+                    class="absolute left-4 top-3 text-gray-500 transition-all pointer-events-none"
+                    >Phone Number</label
+                  >
+                </div>
+                <div class="relative">
+                  <div class="relative">
+                    <button
+                      type="button"
+                      id="service-dropdown"
+                      class="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded focus:outline-none focus:border-primary text-left flex items-center justify-between"
+                    >
+                      <span class="text-gray-500">Select Service</span>
+                      <div class="w-5 h-5 flex items-center justify-center">
+                        <i class="ri-arrow-down-s-line"></i>
+                      </div>
+                    </button>
+                    <div
+                      id="service-dropdown-menu"
+                      class="absolute left-0 right-0 mt-1 bg-white border border-gray-200 rounded shadow-lg z-10 hidden"
+                    >
+                      <div class="py-1">
+                        <a
+                          href="#"
+                          class="block px-4 py-2 text-gray-800 hover:bg-primary hover:text-white"
+                          >Cockroach Control</a
+                        >
+                        <a
+                          href="#"
+                          class="block px-4 py-2 text-gray-800 hover:bg-primary hover:text-white"
+                          >Termite Treatment</a
+                        >
+                        <a
+                          href="#"
+                          class="block px-4 py-2 text-gray-800 hover:bg-primary hover:text-white"
+                          >Mosquito Control</a
+                        >
+                        <a
+                          href="#"
+                          class="block px-4 py-2 text-gray-800 hover:bg-primary hover:text-white"
+                          >Rodent Control</a
+                        >
+                        <a
+                          href="#"
+                          class="block px-4 py-2 text-gray-800 hover:bg-primary hover:text-white"
+                          >Ant Control</a
+                        >
+                        <a
+                          href="#"
+                          class="block px-4 py-2 text-gray-800 hover:bg-primary hover:text-white"
+                          >Bed Bug Treatment</a
+                        >
+                        <a
+                          href="#"
+                          class="block px-4 py-2 text-gray-800 hover:bg-primary hover:text-white"
+                          >Other</a
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="relative">
+                <textarea
+                  id="message"
+                  rows="4"
+                  class="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded focus:outline-none focus:border-primary"
+                  required
+                ></textarea>
+                <label
+                  for="message"
+                  class="absolute left-4 top-3 text-gray-500 transition-all pointer-events-none"
+                  >Describe your pest problem</label
+                >
+              </div>
+              <div class="flex items-center">
+                <input type="checkbox" id="consent" class="hidden" />
+                <label for="consent" class="flex items-center cursor-pointer">
+                  <div
+                    class="w-5 h-5 border border-gray-300 rounded mr-2 flex items-center justify-center"
+                  >
+                    <div
+                      class="w-3 h-3 bg-primary rounded hidden"
+                      id="consent-check"
+                    ></div>
+                  </div>
+                  <span class="text-gray-600 text-sm"
+                    >I agree to receive communications from R.A.S Pest
+                    Control</span
+                  >
+                </label>
+              </div>
+              <button
+                type="submit"
+                class="bg-primary text-white px-8 py-3 !rounded-button font-medium hover:bg-opacity-90 transition-all whitespace-nowrap"
+              >
+                Submit Request
+              </button>
+            </form>
+          </div>
+          <div class="lg:w-1/2">
+            <div
+            
+            >
+              <div
+               
+                class="w-full h-full bg-center bg-cover"
+              ></div>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div>
+                <h3 class="font-bold text-lg mb-3">Contact Information</h3>
+                <div class="space-y-3">
+                  <div class="flex items-start">
+                    <div
+                      class="w-8 h-8 flex items-center justify-center bg-primary bg-opacity-10 rounded-full mr-3 mt-1 flex-shrink-0"
+                    >
+                      <i class="ri-map-pin-line text-primary"></i>
+                    </div>
+                    <div>
+                      <p class="text-gray-600">
+                        <br />lebanom,aramon
+                      </p>
+                    </div>
+                  </div>
+                  <div class="flex items-start">
+                    <div
+                      class="w-8 h-8 flex items-center justify-center bg-primary bg-opacity-10 rounded-full mr-3 mt-1 flex-shrink-0"
+                    >
+                      <i class="ri-phone-line text-primary"></i>
+                    </div>
+                    <div>
+                      <p class="text-gray-600">81\684245</p>
+                    </div>
+                  </div>
+                  <div class="flex items-start">
+                    
+                      
+                     
+                      
+                    
+                  </div>
+                </div>
+              </div>
+              <div>
+                <h3 class="font-bold text-lg mb-3">Business Hours</h3>
+                <div class="space-y-2">
+                  <div class="flex justify-between">
+                    <span class="text-gray-600">Monday - sunday</span>
+                    <span class="text-gray-800 font-medium"
+                      >8:00 AM - 6:00 PM</span
+                    >
+                  </div>
+                  <div class="flex justify-between">
+                    <span class="text-gray-600">Saturday</span>
+                    <span class="text-gray-800 font-medium"
+                      >9:00 AM - 4:00 PM</span
+                    >
+                  </div>
+                  <div class="flex justify-between">
+                    <span class="text-gray-600">Sunday</span>
+                    <span class="text-gray-800 font-medium">Closed</span>
+                  </div>
+                  <div class="mt-6">
+                    <button
+                      class="emergency-btn bg-red-500 text-white px-6 py-3 !rounded-button font-medium hover:bg-opacity-90 transition-all whitespace-nowrap flex items-center"
+                    >
+                      <div
+                        class="w-5 h-5 flex items-center justify-center mr-2"
+                      >
+                        <i class="ri-alarm-warning-line"></i>
+                      </div>
+                      24/7 Emergency Service
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  
+    <footer class="bg-gray-900 text-white pt-20 pb-10 relative">
+      <div class="wave-separator"></div>
+      <div class="container mx-auto px-6">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
+          <div>
+            <h1 class="text-3xl font-['Pacifico'] text-white mb-6">R.A.S</h1>
+            <p class="text-gray-400 mb-6">
+              Professional pest control services for residential and commercial
+              properties. Safe, effective, and guaranteed results.
+            </p>
+            <div class="flex space-x-4">
+             
+               
+                <a href="https://www.facebook.com/profile.php?id=10008848151568" i class="ri-facebook-fill" ></i></a>
+              </a>
+              <a
+                href="#"
+                class="w-10 h-10 flex items-center justify-center bg-gray-800 rounded-full hover:bg-primary transition-colors"
+              >
+                <i class="ri-twitter-x-fill"></i>
+              </a>
+              <a
+                href="#"
+                class="w-10 h-10 flex items-center justify-center bg-gray-800 rounded-full hover:bg-primary transition-colors"
+              >
+                <i class="ri-instagram-fill"></i>
+              </a>
+              <a
+                href="#"
+                class="w-10 h-10 flex items-center justify-center bg-gray-800 rounded-full hover:bg-primary transition-colors"
+              >
+                <i class="ri-linkedin-fill"></i>
+              </a>
+            </div>
+          </div>
+          <div>
+            <h3 class="text-lg font-bold mb-6">Quick Links</h3>
+            <ul class="space-y-3">
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-400 hover:text-primary transition-colors"
+                  >Home</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#services"
+                  class="text-gray-400 hover:text-primary transition-colors"
+                  >Services</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#about"
+                  class="text-gray-400 hover:text-primary transition-colors"
+                  >About Us</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#products"
+                  class="text-gray-400 hover:text-primary transition-colors"
+                  >Products</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#contact"
+                  class="text-gray-400 hover:text-primary transition-colors"
+                  >Contact</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="text-lg font-bold mb-6">Services</h3>
+            <ul class="space-y-3">
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-400 hover:text-primary transition-colors"
+                  >Cockroach Control</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-400 hover:text-primary transition-colors"
+                  >Termite Treatment</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-400 hover:text-primary transition-colors"
+                  >Mosquito Control</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-400 hover:text-primary transition-colors"
+                  >Rodent Control</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-400 hover:text-primary transition-colors"
+                  >Ant Control</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-400 hover:text-primary transition-colors"
+                  >Bed Bug Treatment</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="text-lg font-bold mb-6">Newsletter</h3>
+            <p class="text-gray-400 mb-4">
+              Subscribe to our newsletter for pest control tips and special
+              offers.
+            </p>
+          
+            <div>
+              <h3 class="text-lg font-bold mb-4">We Accept</h3>
+              <div class="flex space-x-3">
+                <div
+                  class="w-10 h-10 flex items-center justify-center bg-gray-800 rounded"
+                >
+                  <i class="ri-visa-fill text-xl"></i>
+                </div>
+                <div
+                  class="w-10 h-10 flex items-center justify-center bg-gray-800 rounded"
+                >
+                  <i class="ri-mastercard-fill text-xl"></i>
+                </div>
+                <div
+                  class="w-10 h-10 flex items-center justify-center bg-gray-800 rounded"
+                >
+                  <i class="ri-paypal-fill text-xl"></i>
+                </div>
+                <div
+                  class="w-10 h-10 flex items-center justify-center bg-gray-800 rounded"
+                >
+                  <i class="ri-apple-fill text-xl"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center"
+        >
+          <p class="text-gray-400 text-sm mb-4 md:mb-0">
+            © 2025 R.A.S Pest Control Service. All rights reserved.
+          </p>
+          <div class="flex space-x-6">
+            <a href="#" class="text-gray-400 hover:text-primary text-sm"
+              >Privacy Policy</a
+            >
+            <a href="#" class="text-gray-400 hover:text-primary text-sm"
+              >Terms of Service</a
+            >
+            <a href="#" class="text-gray-400 hover:text-primary text-sm"
+              >Sitemap</a
+            >
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        // Create particles for hero section
+        const particlesContainer = document.getElementById("particles-container");
+        for (let i = 0; i < 50; i++) {
+          const particle = document.createElement("div");
+          particle.classList.add("particle");
+          particle.style.width = Math.random() * 10 + "px";
+          particle.style.height = particle.style.width;
+          particle.style.left = Math.random() * 100 + "%";
+          particle.style.top = Math.random() * 100 + "%";
+          particle.style.animationDelay = Math.random() * 5 + "s";
+          particle.style.animationDuration = 5 + Math.random() * 10 + "s";
+          particlesContainer.appendChild(particle);
+        }
+
+        // Floating labels for form inputs
+        const formInputs = document.querySelectorAll(
+          'input[type="text"], input[type="email"], input[type="tel"], textarea',
+        );
+        formInputs.forEach((input) => {
+          input.addEventListener("focus", () => {
+            const label = input.previousElementSibling || input.nextElementSibling;
+            if (label.tagName === "LABEL") {
+              label.style.transform = "translateY(-24px) scale(0.8)";
+              label.style.color = "#00c896";
+            }
+          });
+
+          input.addEventListener("blur", () => {
+            const label = input.previousElementSibling || input.nextElementSibling;
+            if (label.tagName === "LABEL" && !input.value) {
+              label.style.transform = "";
+              label.style.color = "";
+            }
+          });
+          // Check if input already has value (e.g. on page reload)
+          if (input.value) {
+            const label = input.previousElementSibling || input.nextElementSibling;
+            if (label.tagName === "LABEL") {
+              label.style.transform = "translateY(-24px) scale(0.8)";
+            }
+          }
+        });
+
+        // Custom checkbox
+        const consentCheckbox = document.getElementById("consent");
+        const consentCheck = document.getElementById("consent-check");
+
+        consentCheckbox.addEventListener("change", function () {
+          if (this.checked) {
+            consentCheck.classList.remove("hidden");
+          } else {
+            consentCheck.classList.add("hidden");
+          }
+        });
+
+        // Service dropdown
+        const serviceDropdown = document.getElementById("service-dropdown");
+        const serviceDropdownMenu = document.getElementById("service-dropdown-menu");
+
+        serviceDropdown.addEventListener("click", function () {
+          serviceDropdownMenu.classList.toggle("hidden");
+        });
+
+        document.addEventListener("click", function (event) {
+          if (!serviceDropdown.contains(event.target)) {
+            serviceDropdownMenu.classList.add("hidden");
+          }
+        });
+
+        serviceDropdownMenu.querySelectorAll("a").forEach((item) => {
+          item.addEventListener("click", function (e) {
+            e.preventDefault();
+            serviceDropdown.querySelector("span").textContent = this.textContent;
+            serviceDropdownMenu.classList.add("hidden");
+          });
+        });
+
+        // Rotate product on scroll
+        const productModel = document.getElementById("product-model");
+        window.addEventListener("scroll", function () {
+          const scrollPosition = window.scrollY;
+          const productSection = document.getElementById("products");
+          const productSectionTop = productSection.offsetTop;
+          const productSectionHeight = productSection.offsetHeight;
+
+          if (
+            scrollPosition > productSectionTop &&
+            scrollPosition < productSectionTop + productSectionHeight
+          ) {
+            const rotateValue = (scrollPosition - productSectionTop) / 20;
+            productModel.style.transform = `rotateY(${rotateValue}deg)`;
+          }
+        });
+
+        // Hotspot feature highlighting
+        const hotspots = document.querySelectorAll(".hotspot");
+        hotspots.forEach((hotspot) => {
+          hotspot.addEventListener("mouseover", function () {
+            const featureId = this.getAttribute("data-feature");
+            const featureElement = document.getElementById("feature-" + featureId);
+            if (featureElement) {
+              featureElement.style.backgroundColor = "rgba(0, 200, 150, 0.1)";
+              featureElement.style.padding = "1rem";
+              featureElement.style.borderRadius = "0.5rem";
+            }
+          });
+
+          hotspot.addEventListener("mouseout", function () {
+            const featureId = this.getAttribute("data-feature");
+            const featureElement = document.getElementById("feature-" + featureId);
+            if (featureElement) {
+              featureElement.style.backgroundColor = "";
+              featureElement.style.padding = "";
+              featureElement.style.borderRadius = "";
+            }
+          });
+        });
+      });
+    </script>
+  </body>
+</html>
